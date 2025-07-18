@@ -1,0 +1,70 @@
+@import "colors.css";
+
+* {
+  font-family: Hack, monospace;
+  font-size: 15px;
+  border: none;
+  padding: 0 10px;
+  color: @foreground;
+  background: transparent;
+}
+
+window#waybar {
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Workspace buttons */
+#workspaces button {
+  background: transparent;
+  color: @foreground;
+  padding: 0 8px;
+  margin: 0 4px;
+  border-radius: 6px;
+}
+#workspaces button.active {
+  background-color: alpha(@color4, 0.3);
+  box-shadow: 0 0 5px @color6;
+}
+#workspaces button:hover {
+  background-color: alpha(@color4, 0.5);
+}
+
+/* Modules on the right */
+#pulseaudio, #network, #clock, #tray, #custom-power {
+  background-color: alpha(@color4, 0.4);
+  border-radius: 8px;
+  margin: 0 6px;
+  padding: 0 10px;
+  }
+
+#custom-power {
+  color: alpha(@foreground, 0.9);
+  font-size: 25px;
+}
+#custom-power:hover {
+  background-color: @color5;
+  box-shadow: 0 0 5px @color5;
+}
+
+/* Clock */
+#clock {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* System Tray */
+#tray {
+  background-color: alpha(@color4, 0.4);
+  padding: 0 6px;
+}
+
+/* Tooltip styling */
+tooltip {
+  background: alpha(@color4, 0.4);
+  color: @foreground;
+  border: 1px solid @color1;
+  border-radius: 6px;
+}

@@ -1,0 +1,85 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  //"width": 2560,
+  "spacing": 10,
+
+  "modules-left": ["custom/hardware", "custom/ram"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["custom/sound", "custom/network", "clock", "custom/calendar", "tray", "custom/noti", "custom/power"],
+
+  "hyprland/workspaces": {
+    "format": "{name} {icon}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "󰜗"
+    }
+  },
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p}", 
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+
+  "custom/calendar": {
+    "format": "",
+    "on-click": "gsimplecal",
+    "tooltip": false
+  },
+
+  "custom/hardware": {
+    "format": "{}% ",
+    "exec": "echo $(top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}')",
+    "interval": 5,
+    "tooltip": false
+  },
+  
+  "custom/ram": {
+  "format": "{}% ",  
+  "exec": "free | awk '/Mem/ { printf(\"%.1f\", $3/$2 * 100) }'",
+  "interval": 5,
+  "tooltip": false
+  },
+
+  "custom/network": {
+    "format": "󰤨 {}%",
+    "exec": "nmcli -t -f ACTIVE,SSID,SIGNAL dev wifi | grep '^yes' | cut -d: -f3",
+    "on-click": "nm-connection-editor",
+    "tooltip": false
+  },
+
+  "custom/sound": {
+    "format": "{}",
+    "exec": "pamixer --get-volume-human",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+  "custom/noti": {
+    "format": "",
+    "on-click": "dunstctl history-pop",
+    "tooltip": false
+  },
+
+    "custom/power": {
+        "format" : "⏻",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml",
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    }
+    
+}
