@@ -3,6 +3,7 @@
 #
 # If not running interactively, don't do anything
 
+export EDITOR="nvim"
 
 #pokemon in terminal
 export PATH="~/.local/bin:$PATH"
@@ -17,6 +18,9 @@ alias grep='grep --color=auto'
 eval "$(starship init bash)"
 
 #nvim to vim
-alias vim="nvim"
+alias vim="ghostty -e nvim"
 #Pinta nice
 alias pinta="pinta ~/Pictures/other/preset.ora" 
+
+#zoxide stuff
+eval "$(zoxide init bash)"

@@ -8,8 +8,7 @@ return {
 	{
 	    "<leader>o",
 	    function()
-		Snacks.win.new()
-		Snacks.win:on_current_tab(Snacks.gitbrowse.open())
+		Snacks.gitbrowse.open()
 	    end,
 	},
     },

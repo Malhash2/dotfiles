@@ -26,6 +26,7 @@ vim.opt.number = true
 vim.opt.signcolumn = "number"
 
 vim.opt.shiftwidth = 4
+vim.opt.clipboard = "unnamedplus"
 
 -- to make hypr client view nvim as nvim rather than kitty
 vim.opt.title = true
