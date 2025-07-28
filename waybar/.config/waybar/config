@@ -43,7 +43,7 @@
   },
   
   "custom/ram": {
-  "format": "{}% ",  
+  "format": "{}% ",  
   "exec": "free | awk '/Mem/ { printf(\"%.1f\", $3/$2 * 100) }'",
   "interval": 5,
   "tooltip": false
