@@ -43,4 +43,4 @@ sed -n 's/--\([^:]*\): \(#[0-9a-fA-F]*\);/@define-color \1 \2;/p' ~/.cache/wal/c
 	fi
     done
 
-
+~/internet-stuff/pywal-obsidianmd/./pywal-obsidianmd.sh "/home/Moshimi/Documents/Obsidian Vault"
