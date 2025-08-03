@@ -1,17 +1,17 @@
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out,                            "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -28,10 +28,10 @@ vim.opt.signcolumn = "number"
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 
--- to make hypr client view nvim as nvim rather than kitty
-vim.opt.title = true
-vim.opt.titlestring = "nvim"
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
 
+-- open a server socket to let other sciprt call a function (i think?)
 
 vim.opt.autochdir = true
 
@@ -40,14 +40,14 @@ vim.fn.serverstart(sock)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  spec = {
-    --import plugins via lua/config/plugins directory
-    { import = "plugins"},
-  },
-  -- Configure any other settings here. See the documentation for more details.a
+	spec = {
+		--import plugins via lua/config/plugins directory
+		{ import = "plugins" },
+	},
+	-- Configure any other settings here. See the documentation for more details.a
 
 
 
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+	-- automatically check for plugin updates
+	checker = { enabled = true },
 })
