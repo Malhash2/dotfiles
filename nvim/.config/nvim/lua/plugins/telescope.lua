@@ -5,8 +5,13 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim',
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
     },
+    enabled = false,
     config = function()
-      vim.keymap.set('n', "<leader>fd", require('telescope.builtin').find_files)
+      vim.keymap.set('n', "<leader>fd", function()
+        require('telescope.builtin').find_files {
+          follow = true
+        }
+      end)
       vim.keymap.set('n', "<leader>fc", function()
         require('telescope.builtin').find_files {
           follow = true,

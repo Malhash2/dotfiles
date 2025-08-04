@@ -1,15 +1,16 @@
 return {
-    "snacks.nvim",
-    opts= {
-	lazygit = {
-	}
+  "snacks.nvim",
+  opts = {
+    lazygit = {
+    }
+  },
+  keys = {
+    {
+      "<leader>l",
+      function()
+        Snacks.lazygit.open()
+      end,
+      desc = "Launch Lazygit"
     },
-    keys = {
-	{
-	    "<leader>l",
-	    function()
-		Snacks.lazygit.open()
-	    end,
-	},
-    },
+  },
 }
