@@ -32,7 +32,6 @@ fi
 mv ~/.cache/wal/ghostty_colors ~/.config/ghostty/themes/pywal_theme 
 
 sed -n 's/--\([^:]*\): \(#[0-9a-fA-F]*\);/@define-color \1 \2;/p' ~/.cache/wal/colors.css > ~/.config/waybar/colors.css
-    pkill waybar && waybar &
     razer-cli -e multicolor,xpalette
     pywalfox update
 
@@ -43,4 +42,5 @@ sed -n 's/--\([^:]*\): \(#[0-9a-fA-F]*\);/@define-color \1 \2;/p' ~/.cache/wal/c
 	fi
     done
 
-~/internet-stuff/pywal-obsidianmd/./pywal-obsidianmd.sh "/home/Moshimi/Documents/Obsidian Vault"
+    pkill waybar && waybar &
+    ~/internet-stuff/pywal-obsidianmd/./pywal-obsidianmd.sh "/home/Moshimi/Documents/Obsidian Vault"

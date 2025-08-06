@@ -24,3 +24,4 @@ alias pinta="pinta ~/Pictures/other/preset.ora"
 
 #zoxide stuff
 eval "$(zoxide init bash)"
+alias cd="z"
