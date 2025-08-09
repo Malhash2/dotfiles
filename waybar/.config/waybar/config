@@ -57,9 +57,8 @@
   },
 
   "custom/sound": {
-    "format": "{}",
-    "exec": "pamixer --get-volume-human",
-    "on-click": "pavucontrol",
+    "format": "{}",
+    "on-click": "easyeffects",
     "tooltip": false
   },
 

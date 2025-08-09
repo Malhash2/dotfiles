@@ -28,12 +28,22 @@ vim.opt.signcolumn = "number"
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 
-vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
-vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("n", "<space>xr", ":.lua<CR>")
+
+-- for changing direcotry
+vim.keymap.set("n", "-", function()
+	local file_dir = vim.fn.expand("%:p:h")
+	if file_dir ~= "" then
+		vim.cmd("cd " .. file_dir)
+		print("Changed directory to: " .. file_dir)
+	else
+		print("No file directory found")
+	end
+end, { desc = "Set cwd to current file's directory" })
 
 -- open a server socket to let other sciprt call a function (i think?)
 
-vim.opt.autochdir = true
+vim.opt.autochdir = false
 
 local sock = "/tmp/nvimsocket-" .. tostring(vim.fn.getpid())
 vim.fn.serverstart(sock)
