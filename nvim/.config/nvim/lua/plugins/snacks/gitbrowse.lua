@@ -6,7 +6,7 @@ return {
   },
   keys = {
     {
-      "<leader>o",
+      "<leader>og",
       function()
         Snacks.gitbrowse.open()
       end,

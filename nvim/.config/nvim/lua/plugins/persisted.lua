@@ -11,7 +11,7 @@ return {
       telescope = { enabled = false }, -- We’re not using Telescope
     })
 
-    vim.keymap.set('n', '<leader>-', '<Cmd>SessionSave<CR>')
+    vim.keymap.set('n', '<leader>-', '<Cmd>SessionSelect<CR>')
 
     -- Optional: Notify on toggle (for UX)
     vim.api.nvim_create_autocmd("User", {
