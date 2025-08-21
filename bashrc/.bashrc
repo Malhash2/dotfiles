@@ -12,13 +12,15 @@ export PATH="~/.local/bin:$PATH"
 #for pywal
 #(cat ~/.cache/wal/sequences &)
 
-#idk lol
+#starship
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 eval "$(starship init bash)"
 
-#nvim to vim
+#aliases
 alias vim="ghostty -e nvim"
+alias logout="hyprctl dispatch exit"
+
 #Pinta nice
 alias pinta="pinta ~/Pictures/other/preset.ora" 
 

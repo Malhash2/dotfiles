@@ -1,7 +1,7 @@
 return {
-    "snacks.nvim",
-    opts= {
-	image = {
-	}
-    }
+  --   "snacks.nvim",
+  --   opts = {
+  --     image = {
+  --     }
+  --   }
 }

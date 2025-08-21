@@ -59,5 +59,6 @@ return {
     { "gy",         function() Snacks.picker.lsp_type_definitions() end,                    desc = "Goto T[y]pe Definition" },
     -- { "<leader>ss", function() Snacks.picker.lsp_symbols() end,                             desc = "LSP Symbols" },
     -- { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end,                   desc = "LSP Workspace Symbols" },
+    { "<leader>ri", function() Snacks.image.hover() end,                                    desc = "reveal image on cursor" },
   },
 }
