@@ -1,37 +1,32 @@
-
 @import url("https://clearvision.github.io/ClearVision-v7/main.css");
 @import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
 
-/* Paste the contents of ~/.cache/wal/colors.css here */
 :root {
-  --wallpaper: url("/tmp/frame.jpg");
-  --background: #020706;
-  --foreground: #def0f2;
-  --cursor: #def0f2;
-  --color0: #020706;
-  ...
+	--background: #020706;
+	--foreground: #def0f2;
+	--cursor: #def0f2;
+	--color0: #020706;
 }
 
-/* Override ClearVision with pywal vars */
 :root {
-  --main-color: var(--color4);
-  --hover-color: var(--color6);
-  --success-color: var(--color2);
-  --danger-color: var(--color1);
+	--main-color: var(--foreground);
+	--hover-color: var(--color6);
+	--success-color: var(--color2);
+	--danger-color: var(--color1);
 
-  --online-color: var(--color2);
-  --idle-color: var(--color3);
-  --dnd-color: var(--color1);
-  --streaming-color: var(--color5);
-  --offline-color: var(--color8);
+	--online-color: var(--color2);
+	--idle-color: var(--color3);
+	--dnd-color: var(--color1);
+	--streaming-color: var(--color5);
+	--offline-color: var(--color8);
 
-  --normal-text: var(--foreground);
-  --muted-text: var(--color8);
+	/* --normal-text: var(--foreground); */
+	/* --muted-text: var(--foreground); */
 
-  --background-shading: rgba(2, 7, 6, 0.6);
-  --card-shading: rgba(2, 7, 6, 0.3);
-  --popout-shading: rgba(2, 7, 6, 0.7);
-  --modal-shading: rgba(2, 7, 6, 0.5);
-  --input-shading: rgba(255, 255, 255, 0.05);
-  --background-image: var(--wallpaper);
+	--background-shading: rgba(2, 7, 6, 0.6);
+	--card-shading: rgba(2, 7, 6, 0.3);
+	--popout-shading: rgba(2, 7, 6, 0.7);
+	--modal-shading: rgba(2, 7, 6, 0.5);
+	--input-shading: rgba(255, 255, 255, 0.05);
+	--background-image: var(--wallpaper);
 }

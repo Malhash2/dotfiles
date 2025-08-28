@@ -29,6 +29,7 @@ vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set("n", "<space>xr", ":.lua<CR>")
+vim.keymap.set("n", "<space>L", ":Lazy<CR>")
 
 -- for changing direcotry
 vim.keymap.set("n", "-", function()
