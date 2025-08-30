@@ -4,8 +4,6 @@
 wallpaper=$(awk -F' *= *' '/^wallpaper *=/ { print $2 }' ~/.config/waypaper/config.ini)
 wallpaper="${wallpaper/#\~/$HOME}"  # Expand ~ to full path
 
-killall mpvpaper
-waypaper --restore
 
 # Check if the file exists
 if [ ! -f "$wallpaper" ]; then
@@ -13,8 +11,6 @@ if [ ! -f "$wallpaper" ]; then
     exit 1
 fi
 
-# Clear existing wal colors
-wal -c
 
 # Handle video wallpaper (e.g. .mp4)
 if [[ "$wallpaper" =~ \.mp4$ ]]; then
@@ -24,10 +20,15 @@ if [[ "$wallpaper" =~ \.mp4$ ]]; then
     ffmpeg -i "$wallpaper" -ss 00:00:01 -vframes 1 "$frame" -y
 
     wal -i "$frame"
+    killall mpvpaper
+    waypaper --restore
 else
     wal -i "$wallpaper"
+    magick "$wallpaper" /tmp/frame.jpg
 fi
 
+# Clear existing wal colors
+wal -c
 
 mv ~/.cache/wal/ghostty_colors ~/.config/ghostty/themes/pywal_theme 
 
