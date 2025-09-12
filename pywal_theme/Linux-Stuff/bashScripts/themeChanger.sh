@@ -30,12 +30,13 @@ fi
 # Clear existing wal colors
 wal -c
 
+#do stuff with the wallpaper
 mv ~/.cache/wal/ghostty_colors ~/.config/ghostty/themes/pywal_theme 
 
 sed -n 's/--\([^:]*\): \(#[0-9a-fA-F]*\);/@define-color \1 \2;/p' ~/.cache/wal/colors.css > ~/.config/waybar/colors.css
     razer-cli -e multicolor,xpalette
-    pywalfox update
 
+    #for nvim
     for sock in /run/user/1000/nvim.*; do
 	if [ -S "$sock" ]; then
 	    nvr --servername "$sock" --remote-send '<Esc>:lua require("pywal16").setup()<CR>' --nostart
