@@ -31,6 +31,9 @@ vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "<space>xr", ":.lua<CR>")
 vim.keymap.set("n", "<space>L", ":Lazy<CR>")
 
+
+vim.keymap.set("n", "<space>bd", ":bd<CR>")
+
 -- for changing direcotry
 vim.keymap.set("n", "-", function()
 	local file_dir = vim.fn.expand("%:p:h")

@@ -6,13 +6,28 @@ return {
   keys = {
     -- needs a lot of tweaking for personal satisfaction
     -- Top Pickers & Explorer
-    { "<leader>ff", function() Snacks.picker.smart() end,                                   desc = "Smart Find Files" },
+    { "<leader>ff", function() Snacks.picker.smart({
+      -- 1. Use 'fd' or 'rg' behavior to respect .gitignore
+      ignored = true, 
+      
+      -- 2. Hide dotfiles (files starting with .)
+      --    Set to true if you WANT to see .env, .eslintrc, etc.
+      hidden = true, 
+
+      -- 3. Explicitly block the heavy Next.js/Node folders
+      exclude = {".git", 
+        ".next", 
+        "node_modules",
+        "dist",
+        "build",
+        ".DS_Store"},
+    }) end,                                   desc = "Smart Find Files" },
     { "<leader>/",  function() Snacks.picker.grep() end,                                    desc = "Grep" },
     { "<leader>:",  function() Snacks.picker.command_history() end,                         desc = "Command History" },
     { "<leader>nf", function() Snacks.picker.notifications() end,                           desc = "Notification History" },
     -- find
     { "<leader>fb", function() Snacks.picker.buffers() end,                                 desc = "Buffers" },
-    { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
+    { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config"), follow = true, hidden = true, }) end, desc = "Find Config File" },
     { "<leader>fd", function() Snacks.picker.files() end,                                   desc = "Find Files" },
     -- { "<leader>fp",      function() Snacks.picker.projects() end,                                desc = "Projects" },
     { "<leader>fr", function() Snacks.picker.recent() end,                                  desc = "Recent" },
