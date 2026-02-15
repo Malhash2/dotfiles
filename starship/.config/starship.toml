@@ -1,6 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [aws]
+symbol = " "
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [azure]
@@ -10,15 +11,19 @@ format = '\[[$symbol($subscription)]($style)\]'
 format = '\[[$symbol$percentage]($style)\]'
 
 [buf]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [bun]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [c]
+symbol = " "
 format = '\[[$symbol($version(-$name))]($style)\]'
 
 [cmake]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
@@ -28,30 +33,36 @@ format = '\[[⏱ $duration]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [conda]
+symbol = " "
 format = '\[[$symbol$environment]($style)\]'
 
 [container]
 format = '\[[$symbol \[$name\]]($style)\]'
 
 [cpp]
+symbol = " "
 format = '\[[$symbol($version(-$name))]($style)\]'
 
 [crystal]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [daml]
 format = '\[[$symbol($version)]($style)\]'
 
 [dart]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [deno]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [direnv]
 format = '\[[$symbol$loaded/$allowed]($style)\]'
 
 [docker_context]
+symbol = " "
 format = '\[[$symbol$context]($style)\]'
 
 [dotnet]
@@ -61,30 +72,37 @@ format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
 format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
 
 [elm]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [erlang]
 format = '\[[$symbol($version)]($style)\]'
 
 [fennel]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [fortran]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [fossil_branch]
+symbol = " "
 format = '\[[$symbol$branch]($style)\]'
 
 [fossil_metrics]
 format = '\[[+$added]($added_style)\]\[[-$deleted]($deleted_style)\]'
 
 [gcloud]
+symbol = " "
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
 
 [git_branch]
+symbol = " "
 format = '\[[$symbol$branch]($style)\]'
 
 [git_commit]
+tag_symbol = '  '
 format = '\[[\($hash$tag\)]($style)\]'
 
 [git_metrics]
@@ -100,39 +118,48 @@ format = '([\[$all_status$ahead_behind\]]($style))'
 format = '\[[$symbol($version)]($style)\]'
 
 [golang]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [gradle]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [guix_shell]
+symbol = " "
 format = '\[[$symbol]($style)\]'
 
 [haskell]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [haxe]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [helm]
 format = '\[[$symbol($version)]($style)\]'
 
 [hg_branch]
+symbol = " "
 format = '\[[$symbol$branch]($style)\]'
 
 [hostname]
 format = '\[[$ssh_symbol($hostname)]($style)\] '
 
 [java]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [jobs]
 format = '\[[$symbol$number]($style)\]'
 
 [julia]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [kotlin]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [kubernetes]
@@ -142,12 +169,15 @@ format = '\[[$symbol$context( \($namespace\))]($style)\]'
 format = '\[[$localipv4]($style)\]'
 
 [lua]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [memory_usage]
+symbol = "󰍛 "
 format = '\[$symbol[$ram( | $swap)]($style)\]'
 
 [meson]
+symbol = "󰔷 "
 format = '\[[$symbol$project]($style)\]'
 
 [mise]
@@ -163,15 +193,19 @@ format = '\[[$symbol$name]($style)\]'
 format = '\[[$symbol \[$name\]]($style)\]'
 
 [nim]
+symbol = "󰆥 "
 format = '\[[$symbol($version)]($style)\]'
 
 [nix_shell]
+symbol = " "
 format = '\[[$symbol$state( \($name\))]($style)\]'
 
 [nodejs]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [ocaml]
+symbol = " "
 format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
 
 [odin]
@@ -183,22 +217,79 @@ format = '\[[$symbol($version)]($style)\]'
 [openstack]
 format = '\[[$symbol$cloud(\($project\))]($style)\]'
 
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
 [os]
 format = '\[[$symbol]($style)\]'
 
+
 [package]
+symbol = "󰏗 "
 format = '\[[$symbol$version]($style)\]'
 
 [perl]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [php]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [pijul_channel]
+symbol = " "
 format = '\[[$symbol$channel]($style)\]'
 
 [pixi]
+symbol = "󰏗 "
 format = '\[[$symbol$version( $environment)]($style)\]'
 
 [pulumi]
@@ -208,6 +299,7 @@ format = '\[[$symbol$stack]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [python]
+symbol = " "
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [quarto]
@@ -220,15 +312,19 @@ format = '\[[$symbol($version-$vm_version)]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [rlang]
+symbol = "󰟔 "
 format = '\[[$symbol($version)]($style)\]'
 
 [ruby]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [rust]
+symbol = "󱘗 "
 format = '\[[$symbol($version)]($style)\]'
 
 [scala]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [shell]
@@ -244,12 +340,14 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$environment]($style)\]'
 
 [status]
+symbol = " "
 format = '\[[$symbol$status]($style)\]'
 
 [sudo]
 format = '\[[as $symbol]($style)\]'
 
 [swift]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [terraform]
@@ -274,7 +372,10 @@ format = '\[vcsh [$symbol$repo]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [xmake]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
 
 [zig]
+symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+

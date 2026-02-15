@@ -3,7 +3,7 @@ return {
   event = "BufReadPre",
   config = function()
     require("persisted").setup({
-      autostart = true,               -- Start recording sessions on startup
+      autostart = false,              -- Start recording sessions on startup
       autoload = false,               -- Don't auto-load session unless manually triggered
       follow_cwd = true,              -- Save per-cwd
       use_git_branch = true,          -- Session name includes Git branch
