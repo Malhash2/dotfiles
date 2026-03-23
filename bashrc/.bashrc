@@ -31,6 +31,9 @@ alias cd="z"
 #eza 
 alias ls="eza"
 
+#yazi
+alias y="yazi"
+
 
 #for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
