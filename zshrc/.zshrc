@@ -37,3 +37,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # 3. Add a Preview Window (requires 'bat' for syntax highlighting, or use 'cat')
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --preview "bat --style=numbers --color=always --line-range :500 {}"'
+export PATH="$HOME/.local/bin:$PATH"
