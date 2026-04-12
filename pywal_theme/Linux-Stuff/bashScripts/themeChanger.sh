@@ -35,7 +35,7 @@ wal -c
 # python3 ~/.config/copyq/themes/pywal_to_copyq.py
 
 #do stuff with the wallpaper
-sed -n 's/--\([^:]*\): \(#[0-9a-fA-F]*\);/@define-color \1 \2;/p' ~/.cache/wal/colors.css >~/.config/waybar/colors.css
+# sed -n 's/--\([^:]*\): \(#[0-9a-fA-F]*\);/@define-color \1 \2;/p' ~/.cache/wal/colors.css >~/.config/waybar/colors.css
 razer-cli -e multicolor,xpalette
 
 #for nvim
@@ -53,5 +53,5 @@ razer-cli -e multicolor,xpalette
 #   fi
 # done
 
-pkill waybar && waybar &
-~/internet-stuff/pywal-obsidianmd/./pywal-obsidianmd.sh "/home/Moshimi/Documents/Obsidian Vault"
+# pkill waybar && waybar &
+# ~/internet-stuff/pywal-obsidianmd/./pywal-obsidianmd.sh "/home/Moshimi/Documents/Obsidian Vault"
