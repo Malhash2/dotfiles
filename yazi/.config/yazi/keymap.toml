@@ -1,0 +1,6 @@
+[mgr]
+prepend_keymap = [
+  { on = ["T"], run = "plugin recycle-bin",              desc = "Open Recycle Bin menu" },
+  { on = ["M"], run = "plugin mount",              desc = "Open Mount menu" },
+]
+
